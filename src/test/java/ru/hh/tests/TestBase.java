@@ -24,7 +24,7 @@ public class TestBase {
         String selenoidUrl = System.getProperty("selenoidUrl");
         String login = System.getProperty("login");
         String password = System.getProperty("password");
-        Сonfiguration.remote = String.format("https://%s:%s@%s", login, password, selenoidUrl);
+        Configuration.remote = String.format("https://%s:%s@%s", login, password, selenoidUrl);
         //gradle test -DbaseUrl=https://hh.ru -Dbrowser=chrome:100.0 -DbrowserSize=1920x1080 -DselenoidUrl=selenoid.autotests.cloud/wd/hub -Dlogin=user1 -Dpassword=1234
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
