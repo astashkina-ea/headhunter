@@ -2,12 +2,10 @@
 ___
 
 ## Содержание:
-___
 
 - [Используемый стек](#computer-используемый-стек)
 - [Список проверок](#тест-кейсы)
 
-___
 ## :computer: Используемый стек
 
 | <a href="https://www.jetbrains.com/idea/"><img src="media/logo/Intelij_IDEA.svg" width="40" height="40"  alt="IDEA"/></a> | <a href="https://www.jetbrains.com/idea/"><img src="media/logo/Java.svg" width="40" height="40"  alt="Java"/></a> | <a href="https://www.jetbrains.com/idea/"><img src="media/logo/JUnit5.svg" width="40" height="40"  alt="JUnit 5"/></a> |                      <a href="https://www.jetbrains.com/idea/"><img src="media/logo/Gradle.svg" width="40" height="40"  alt="Gradle"/></a>                      | <a href="https://www.jetbrains.com/idea/"><img src="media/logo/Selenide.svg" width="40" height="40"  alt="Selenide"/></a> |
@@ -21,16 +19,16 @@ ___
 - Тесты в данном проекте написаны на языке <code>Java</code> с использованием фреймворка для тестирования <code>Selenide</code> в среде разработки <code>IDEA</code>
 - В качестве сборщика был использован - <code>Gradle</code>
 - <code>JUnit 5</code> задействован в качестве фреймворка модульного тестирования
-- При прогоне тестов браузер запускается в <code>Selenoed</code>
+- При прогоне тестов браузер запускается в <code>Selenoid</code>
 - Для удаленного запуска реализована джоба в <code>Jenkins</code> с формированием <code>Allure-отчета</code> и отправкой результатов в <code>Telegram</code> при помощи бота
 - Осуществлена интеграция с <code>Allure TestOps</code> и <code>Jira</code>
----
+
 ## :spiral_notepad: Список проверок:
 
 ### Web-тесты:
 :white_check_mark: Авторизация по почте и паролю  
 :white_check_mark: Отображение региона в результатах поиска вакансий при фильтрации по региону  
-:white_check_mark: Отображение специализаций для категории 
+:white_check_mark: Отображение специализаций для категории
 :white_check_mark: Проверка на странице результов поиска установленного чекбокса в блоке "График работы"  
 :white_check_mark: Проверка открытия и закрытия модалки региона     
 
