@@ -1,5 +1,5 @@
 # Проект по автоматизации тестовых сценариев для сайта компании [hh.ru](https://auto.ru/)
-Демо-проект
+HeadHunter — один из крупных сайтов по поиску работы и сотрудников в мире.
 ___
 
 ## Содержание:
@@ -29,12 +29,28 @@ ___
 ## :spiral_notepad: Список проверок:
 
 ### Web-тесты:
-:white_check_mark: Авторизация по почте и паролю  
-:white_check_mark: Отображение региона в результатах поиска вакансий при фильтрации по региону  
-:white_check_mark: Отображение специализаций для категории
-:white_check_mark: Проверка на странице результов поиска установленного чекбокса в блоке "График работы"  
-:white_check_mark: Проверка открытия и закрытия модалки региона     
+:white_check_mark: Авторизация по почте и паролю  <br />
+:white_check_mark: Отображение региона в результатах поиска вакансий при фильтрации по региону  (параметризованный тест)<br />
+:white_check_mark: Отображение специализаций для категории (параметризованный тест)<br />
+:white_check_mark: Проверка на странице результов поиска установленного чекбокса в блоке "График работы"  (параметризованный тест)<br />
+:white_check_mark: Проверка открытия и закрытия модалки региона
+
 ___
 
+## :arrow_forward: Локальный запуск автотестов:
+```
+gradle test -DbaseUrl=https://hh.ru -Dbrowser=chrome:100.0 -DbrowserSize=1920x1080 -DselenoidUrl=selenoid.autotests.cloud/wd/hub -Dlogin=user1 -Dpassword=1234
+```
+для запуска всех тестов
+```
+gradle smoke -DbaseUrl=https://hh.ru -Dbrowser=chrome:100.0 -DbrowserSize=1920x1080 -DselenoidUrl=selenoid.autotests.cloud/wd/hub -Dlogin=user1 -Dpassword=1234
+```
+для запуска smoke-тестов
 
 
+
+
+
+
+
+## <img width="4%" style="vertical-align:middle" title="Jenkins" src="media/logo/Jenkins.svg"> Сборка в Jenkins

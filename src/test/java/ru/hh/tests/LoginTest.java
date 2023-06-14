@@ -4,9 +4,11 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import ru.hh.config.CredentialsConfig;
 import ru.hh.pages.LoginPage;
 import ru.hh.pages.PersonalInfoSettingPage;
 import ru.hh.pages.components.NavigationComponent;
@@ -16,13 +18,16 @@ import ru.hh.pages.components.ProfileDropdownListComponent;
 @DisplayName("Авторизация")
 public class LoginTest extends TestBase {
 
+    private static CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
+
+
     LoginPage loginPage = new LoginPage();
     NavigationComponent navigationComponent = new NavigationComponent();
     ProfileDropdownListComponent profileDropdownListComponent = new ProfileDropdownListComponent();
     PersonalInfoSettingPage personalInfoSettingPage = new PersonalInfoSettingPage();
 
-    String emailValue = "kihoyo8545@soremap.com";
-    String passwordValue = "Test12345";
+    String emailValue = config.getLoginAccount();
+    String passwordValue = config.getPasswordAccount();
 
     @Tag("smoke")
     @Story("Авторизация по почте")
