@@ -18,7 +18,7 @@ import ru.hh.pages.components.ProfileDropdownListComponent;
 @DisplayName("Авторизация")
 public class LoginTest extends TestBase {
 
-    private static CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class);
+    private static CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class, System.getProperties());
 
 
     LoginPage loginPage = new LoginPage();

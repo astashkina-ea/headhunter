@@ -34,23 +34,52 @@ ___
 :white_check_mark: Отображение специализаций для категории (параметризованный тест)<br />
 :white_check_mark: Проверка на странице результов поиска установленного чекбокса в блоке "График работы"  (параметризованный тест)<br />
 :white_check_mark: Проверка открытия и закрытия модалки региона
-
 ___
 
-## :arrow_forward: Локальный запуск автотестов:
+## :arrow_forward: Локальный запуск автотестов
+
+### На своем компьютере с параметрами сборки по умолчанию:
 ```
-gradle test -DbaseUrl=https://hh.ru -Dbrowser=chrome:100.0 -DbrowserSize=1920x1080 -DselenoidUrl=selenoid.autotests.cloud/wd/hub -Dlogin=user1 -Dpassword=1234
+gradle clean test
 ```
-для запуска всех тестов
+
+### На своем компьютере с параметрами сборки из local.properties и credentials.properties:
 ```
-gradle smoke -DbaseUrl=https://hh.ru -Dbrowser=chrome:100.0 -DbrowserSize=1920x1080 -DselenoidUrl=selenoid.autotests.cloud/wd/hub -Dlogin=user1 -Dpassword=1234
+gradle clean test -Denvironment='local'
 ```
-для запуска smoke-тестов
+### В selenoid с параметрами сборки из remote.properties и credentials.properties:
+```
+gradle clean test -Denvironment='remote'
+```
+### На своем компьютере/в selenoid с указанием необходимых параметров:
+```
+gradle clean
+TASK
+-DbaseUrl=BASE_URL
+-Dbrowser=BROWSER
+-DbrowserVersion=BROWSER_VERSION
+-DbrowserSize=BROWSER_SIZE
+-DremoteUrl=REMOTE_URL
+-DloginAccount=LOGIN_ACCOUNT
+-DpasswordAccount=PASSWORD_ACCOUNT
+```
+где:
+>- TASK - название таски test или smoke
+>- BASE_URL - адрес тестового стенда (по умолчанию https://hh.ru)
+>- BROWSER - браузер, в котором будут выполняться тесты (по умолчанию chrome)
+>- BROWSER_VERSION - версия браузера (по умолчанию 100.0)
+>- BROWSER_SIZE - размер окна браузера (по умолчанию 1920x1080)
+>- REMOTE_URL - адрес для удаленного запуска тестов
+>- LOGIN_ACCOUNT - логин тестового аккаунта (по умолчанию в credentials.properties)
+>- PASSWORD_ACCOUNT - пароль тествого аккаунта (по умолчанию в credentials.properties)
+___
 
+## <img width="4%" style="vertical-align:middle" title="Jenkins" src="media/logo/Jenkins.svg"> Запуск автотестов в Jenkins
 
+### Для запуска автотестов в Jenkins необходимо:
+1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/Students/job/C19-astashkina_ea-unit15_hw/">проект</a>
+2. Выбрать пункт **Собрать с параметрами**
+3. При необходимости изменить параметры, выбрав значения
+4. Нажать **Собрать**
 
-
-
-
-
-## <img width="4%" style="vertical-align:middle" title="Jenkins" src="media/logo/Jenkins.svg"> Сборка в Jenkins
+![This is an image](/media/screens/jenkins.png)
