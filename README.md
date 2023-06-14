@@ -82,4 +82,4 @@ ___
 3. При необходимости изменить параметры, выбрав значения
 4. Нажать **Собрать**
 
-![This is an image](/media/screens/jenkins.png)
+![This is an image](/media/screens/jenkins1.png)
