@@ -8,7 +8,7 @@ ___
 - [Список проверок](#spiral_notepad-список-проверок)
 ___
 
-## :computer: Используемый стек:
+## :computer: Используемый стек
 
 | <a href="https://www.jetbrains.com/idea/"><img src="media/logo/Intelij_IDEA.svg" width="40" height="40"  alt="IDEA"/></a> | <a href="https://www.jetbrains.com/idea/"><img src="media/logo/Java.svg" width="40" height="40"  alt="Java"/></a> | <a href="https://www.jetbrains.com/idea/"><img src="media/logo/JUnit5.svg" width="40" height="40"  alt="JUnit 5"/></a> |                      <a href="https://www.jetbrains.com/idea/"><img src="media/logo/Gradle.svg" width="40" height="40"  alt="Gradle"/></a>                      | <a href="https://www.jetbrains.com/idea/"><img src="media/logo/Selenide.svg" width="40" height="40"  alt="Selenide"/></a> |
 |:-------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------:|
@@ -26,7 +26,7 @@ ___
 - Осуществлена интеграция с <code>Allure TestOps</code> и <code>Jira</code>
 ___
 
-## :spiral_notepad: Список проверок:
+## :spiral_notepad: Список проверок
 
 ### Web-тесты:
 :white_check_mark: Авторизация по почте и паролю  <br />
@@ -51,7 +51,7 @@ gradle clean test -Denvironment='local'
 ```
 gradle clean test -Denvironment='remote'
 ```
-### На своем компьютере/в selenoid с указанием необходимых параметров:
+### На своем компьютере/в selenoid с указанием необходимых параметров сборки:
 ```
 gradle clean
 TASK
@@ -64,14 +64,14 @@ TASK
 -DpasswordAccount=PASSWORD_ACCOUNT
 ```
 где:
->- TASK - название таски test или smoke
->- BASE_URL - адрес тестового стенда (по умолчанию https://hh.ru)
->- BROWSER - браузер, в котором будут выполняться тесты (по умолчанию chrome)
->- BROWSER_VERSION - версия браузера (по умолчанию 100.0)
->- BROWSER_SIZE - размер окна браузера (по умолчанию 1920x1080)
->- REMOTE_URL - адрес для удаленного запуска тестов
->- LOGIN_ACCOUNT - логин тестового аккаунта (по умолчанию в credentials.properties)
->- PASSWORD_ACCOUNT - пароль тествого аккаунта (по умолчанию в credentials.properties)
+>- <code>TASK</code> - название таски test или smoke
+>- <code>BASE_URL</code> - адрес тестового стенда (по умолчанию https://hh.ru)
+>- <code>BROWSER</code> - браузер, в котором будут выполняться тесты (по умолчанию chrome)
+>- <code>BROWSER_VERSION</code> - версия браузера (по умолчанию 100.0)
+>- <code>BROWSER_SIZE</code> - размер окна браузера (по умолчанию 1920x1080)
+>- <code>REMOTE_URL</code> - адрес для удаленного запуска тестов
+>- <code>LOGIN_ACCOUNT</code> - логин тестового аккаунта (по умолчанию в credentials.properties)
+>- <code>PASSWORD_ACCOUNT</code> - пароль тествого аккаунта (по умолчанию в credentials.properties)
 ___
 
 ## <img width="4%" style="vertical-align:middle" title="Jenkins" src="media/logo/Jenkins.svg"> Запуск автотестов в Jenkins
@@ -82,4 +82,17 @@ ___
 3. При необходимости изменить параметры, выбрав значения
 4. Нажать **Собрать**
 
-![This is an image](/media/screens/jenkins1.png)
+![This is an image](/media/screens/jenkins_0.png)
+
+После выполнения сборки, в блоке **История сборок** напротив номера сборки появятся
+значок <img width="2%" title="Allure Report" src="media/logo/Allure_Report.svg">**Allure
+Report**, кликнув по которому, откроется страница с сформированным html-отчетом, 
+и значок <img width="2%" title="Allure TestOps" src="media/logo/AllureTestOps.svg">**Allure
+TestOps**, кликнув по которому, откроется система управления тестами.
+
+![This is an image](/media/screens/jenkins_1.png)
+---
+
+
+## <img width="4%" style="vertical-align:middle" title="Allure Report" src="media/logo/Allure_Report.svg"> Пример Allure-отчета
+
