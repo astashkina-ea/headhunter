@@ -55,13 +55,13 @@ ___
 gradle clean test
 ```
 
-### На своем компьютере с параметрами сборки из local.properties и credentials.properties
+### На своем компьютере с параметрами сборки из local.properties
 
 ```
 gradle clean test -Denvironment='local'
 ```
 
-### В selenoid с параметрами сборки из remote.properties и credentials.properties
+### В selenoid с параметрами сборки из remote.properties
 
 ```
 gradle clean test -Denvironment='remote'
@@ -82,7 +82,7 @@ TASK
 ```
 
 где:
->-<code>TASK</code> - название таски test или smoke
+>- <code>TASK</code> - название таски test или smoke
 >- <code>BASE_URL</code> - адрес тестового стенда (по умолчанию https://hh.ru)
 >- <code>BROWSER</code> - браузер, в котором будут выполняться тесты (по умолчанию chrome)
 >- <code>BROWSER_VERSION</code> - версия браузера (по умолчанию 100.0)
