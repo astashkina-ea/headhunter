@@ -5,8 +5,15 @@ ___
 
 ## Содержание:
 
-- [Используемый стек](#computer-используемый-стек)
+- [Используемый стек]
 - [Список проверок](#spiral_notepad-список-проверок)
+- [Локальный запуск автотестов](#arrow_forward-запуск-автотестов)
+- [Запуск автотестов в Jenkins](#-сборка-в-jenkins)
+- [Пример Allure-отчета](#-пример-allure-отчета)
+- [Интеграция с Allure TestOps](#-интеграция-с-allure-testOps)
+- [Интеграция с Jira](#-интеграция-с-jira)
+- [Уведомления в Telegram](#-уведомления-в-telegram)
+- [Видео пример запуска тестов](#-видео-пример-запуска-тестов)
 
 ___
 
@@ -162,7 +169,7 @@ ___
 
 ___
 
-## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в телеграм
+## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в Telegram
 
 После завершения сборки, бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом.
 
