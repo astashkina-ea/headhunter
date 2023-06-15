@@ -1,11 +1,13 @@
 # Проект по автоматизации тестовых сценариев для сайта компании [hh.ru](https://auto.ru/)
 HeadHunter — один из крупных сайтов по поиску работы и сотрудников в мире.
+
 ___
 
 ## Содержание:
 
 - [Используемый стек](#computer-используемый-стек)
 - [Список проверок](#spiral_notepad-список-проверок)
+
 ___
 
 ## :computer: Используемый стек
@@ -24,6 +26,7 @@ ___
 - При прогоне тестов браузер запускается в <code>Selenoid</code>
 - Для удаленного запуска реализована джоба в <code>Jenkins</code> с формированием <code>Allure-отчета</code> и отправкой результатов в <code>Telegram</code> при помощи бота
 - Осуществлена интеграция с <code>Allure TestOps</code> и <code>Jira</code>
+
 ___
 
 ## :spiral_notepad: Список проверок
@@ -34,24 +37,31 @@ ___
 :white_check_mark: Отображение специализаций для категории (параметризованный тест)<br />
 :white_check_mark: Проверка на странице результов поиска установленного чекбокса в блоке "График работы"  (параметризованный тест)<br />
 :white_check_mark: Проверка открытия и закрытия модалки региона
+
 ___
 
 ## :arrow_forward: Локальный запуск автотестов
 
 ### На своем компьютере с параметрами сборки по умолчанию:
+
 ```
 gradle clean test
 ```
 
 ### На своем компьютере с параметрами сборки из local.properties и credentials.properties:
+
 ```
 gradle clean test -Denvironment='local'
 ```
+
 ### В selenoid с параметрами сборки из remote.properties и credentials.properties:
+
 ```
 gradle clean test -Denvironment='remote'
 ```
+
 ### На своем компьютере/в selenoid с указанием необходимых параметров сборки:
+
 ```
 gradle clean
 TASK
@@ -63,8 +73,9 @@ TASK
 -DloginAccount=LOGIN_ACCOUNT
 -DpasswordAccount=PASSWORD_ACCOUNT
 ```
+
 где:
->- <code>TASK</code> - название таски test или smoke
+>-<code>TASK</code> - название таски test или smoke
 >- <code>BASE_URL</code> - адрес тестового стенда (по умолчанию https://hh.ru)
 >- <code>BROWSER</code> - браузер, в котором будут выполняться тесты (по умолчанию chrome)
 >- <code>BROWSER_VERSION</code> - версия браузера (по умолчанию 100.0)
@@ -72,6 +83,7 @@ TASK
 >- <code>REMOTE_URL</code> - адрес для удаленного запуска тестов
 >- <code>LOGIN_ACCOUNT</code> - логин тестового аккаунта (по умолчанию в credentials.properties)
 >- <code>PASSWORD_ACCOUNT</code> - пароль тествого аккаунта (по умолчанию в credentials.properties)
+
 ___
 
 ## <img width="4%" style="vertical-align:middle" title="Jenkins" src="media/logo/Jenkins.svg"> Запуск автотестов в Jenkins
@@ -90,14 +102,17 @@ Report</code>, кликнув по которому, откроется стра
 и значок <img width="2%" title="Allure TestOps" src="media/logo/AllureTestOps.svg"><code>Allure TestOps</code>, кликнув по которому, откроется система управления тестами.
 
 ![This is an image](/media/screens/jenkins_1.png)
+
 ---
 
 ## <img width="4%" style="vertical-align:middle" title="Allure Report" src="media/logo/Allure_Report.svg"> Пример Allure-отчета
 
 ### Главная страница Allure-отчета
+
 ![This is an image](/media/screens/Allure_Report_1.png)
 
 ### Пример отчёта выполнения одного из автотестов
+
 Содержит в себе:
 - Шаги теста
 - Скриншот страницы на последнем шаге
@@ -106,6 +121,7 @@ Report</code>, кликнув по которому, откроется стра
 - Видео прогона автотестов
 
 ![This is an image](/media/screens/Allure_Report_2.png)
+
 ----
 
 ## <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="media/logo/AllureTestOps.svg"> Интеграция с Allure TestOps
@@ -131,6 +147,7 @@ Report</code>, кликнув по которому, откроется стра
 - Видео прогона автотестов
 - 
 ![This is an image](/media/screens/Allure_TestOps_4.png)
+
 ___
 
 ## <img width="4%" style="vertical-align:middle" title="Jira" src="media/logo/Jira.svg"> Интеграция с Jira
@@ -142,6 +159,7 @@ ___
 Также прикреплены результаты запусков/прохождения тестов.
 
 ![This is an image](/media/screens/Jira_2.png)
+
 ___
 
 ## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в телеграм
