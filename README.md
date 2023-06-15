@@ -5,10 +5,10 @@ ___
 
 ## Содержание:
 
-- [Используемый стек](#-используемый-стек)
+- [Используемый стек](#computer-используемый-стек)
 - [Список проверок](#spiral_notepad-список-проверок)
-- [Локальный запуск автотестов](#arrow_forward-запуск-автотестов)
-- [Запуск автотестов в Jenkins](#-сборка-в-jenkins)
+- [Локальный запуск автотестов](#arrow_forward-локальный-запуск-автотестов)
+- [Запуск автотестов в Jenkins](#-запуск-автотестов-в-jenkins)
 - [Пример Allure-отчета](#-пример-allure-отчета)
 - [Интеграция с Allure TestOps](#-интеграция-с-allure-testOps)
 - [Интеграция с Jira](#-интеграция-с-jira)
@@ -159,11 +159,11 @@ ___
 
 ## <img width="4%" style="vertical-align:middle" title="Jira" src="media/logo/Jira.svg"> Интеграция с Jira
 
-Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>. В задаче отображаются прикреплённые к ней тест-кейсы:
+### Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>. В задаче отображаются прикреплённые к ней тест-кейсы
 
 ![This is an image](/media/screens/Jira_1.png)
 
-Также прикреплены результаты запусков/прохождения тестов.
+### Также прикреплены результаты запусков/прохождения тестов
 
 ![This is an image](/media/screens/Jira_2.png)
 
@@ -171,5 +171,14 @@ ___
 
 ## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в Telegram
 
-После завершения сборки, бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом.
+### После завершения сборки, бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом
 
+![This is an image](/media/screens/Telegram.png)
+
+___
+
+## <img width="4%" style="vertical-align:middle" title="Selenoid" src="media/logo/Selenoid.svg"> Видео пример запуска тестов
+
+### Для каждого теста добавляется видео, на котором записан прогон теста 
+
+---
