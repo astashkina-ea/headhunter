@@ -21,6 +21,7 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
 
+        Configuration.pageLoadStrategy = "eager";
         Configuration.baseUrl = config.getBaseUrl();
         Configuration.browser = config.getBrowser();
         Configuration.browserVersion = config.getBrowserVersion();
@@ -40,7 +41,7 @@ public class TestBase {
     @BeforeEach
     void beforeEach() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        Selenide.clearBrowserCookies();
+        //Selenide.clearBrowserCookies();
     }
 
     @AfterEach
