@@ -13,7 +13,7 @@ ___
 - [Интеграция с Allure TestOps](#-интеграция-с-allure-testOps)
 - [Интеграция с Jira](#-интеграция-с-jira)
 - [Уведомления в Telegram](#-уведомления-в-telegram)
-- [Видео пример запуска тестов](#-видео-пример-запуска-тестов)
+- [Видео с запуском тестов](#-видео-с-запуском-тестов)
 
 ___
 
@@ -177,9 +177,9 @@ ___
 
 ___
 
-## <img width="4%" style="vertical-align:middle" title="Selenoid" src="media/logo/Selenoid.svg"> Видео пример запуска тестов
+## <img width="4%" style="vertical-align:middle" title="Selenoid" src="media/logo/Selenoid.svg"> Видео с запуском тестов
 
-### Для каждого теста добавляется видео, на котором записан прогон теста 
+### Для всех тестов записано видео с прохождением тестов
 
 ![This is an gif](/media/screens/selenoid.gif)
 
