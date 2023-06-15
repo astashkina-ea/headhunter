@@ -21,7 +21,6 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
 
-        Configuration.pageLoadStrategy = "eager";
         Configuration.baseUrl = config.getBaseUrl();
         Configuration.browser = config.getBrowser();
         Configuration.browserVersion = config.getBrowserVersion();
