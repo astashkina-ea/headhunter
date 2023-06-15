@@ -173,7 +173,7 @@ ___
 
 ### После завершения сборки, бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом
 
-![This is an image](/media/screens/Telegram.png)
+![This is an image](/media/screens/Telegram_1.png)
 
 ___
 
