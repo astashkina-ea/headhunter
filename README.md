@@ -145,7 +145,7 @@ Report</code>, кликнув по которому, откроется стра
 - Page Source
 - Логи браузерной консоли
 - Видео прогона автотестов
-- 
+
 ![This is an image](/media/screens/Allure_TestOps_4.png)
 
 ___
