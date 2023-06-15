@@ -92,7 +92,6 @@ Report</code>, кликнув по которому, откроется стра
 ![This is an image](/media/screens/jenkins_1.png)
 ---
 
-
 ## <img width="4%" style="vertical-align:middle" title="Allure Report" src="media/logo/Allure_Report.svg"> Пример Allure-отчета
 
 ![This is an image](/media/screens/Allure_Report_1.png)
@@ -109,13 +108,21 @@ Report</code>, кликнув по которому, откроется стра
 ----
 
 ## <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="media/logo/AllureTestOps.svg"> Интеграция с Allure TestOps
+
 Пример dashboard с общими результатами тестирования:<br />
+
 ![This is an image](/media/screens/Allure_TestOps_1.png)<br />
+
 Общий список всех кейсов:<br />
+
 ![This is an image](/media/screens/Allure_TestOps_2.png)<br />
+
 Тест-планы проекта:<br />
+
 ![This is an image](/media/screens/Allure_TestOps_3.png)<br />
+
 Пример отчёта выполнения одного из автотестов:<br />
+
 ![This is an image](/media/screens/Allure_TestOps_4.png)
 ___
 
