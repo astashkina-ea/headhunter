@@ -84,11 +84,10 @@ ___
 
 ![This is an image](/media/screens/jenkins_0.png)
 
-После выполнения сборки, в блоке **История сборок** напротив номера сборки появятся
-значок <img width="2%" title="Allure Report" src="media/logo/Allure_Report.svg">**Allure
-Report**, кликнув по которому, откроется страница с сформированным html-отчетом, 
-и значок <img width="2%" title="Allure TestOps" src="media/logo/AllureTestOps.svg">**Allure
-TestOps**, кликнув по которому, откроется система управления тестами.
+После выполнения сборки, в блоке <code>История сборок</code> напротив номера сборки появятся
+значок <img width="2%" title="Allure Report" src="media/logo/Allure_Report.svg"><code>Allure
+Report</code>, кликнув по которому, откроется страница с сформированным html-отчетом, 
+и значок <img width="2%" title="Allure TestOps" src="media/logo/AllureTestOps.svg"><code>Allure TestOps</code>, кликнув по которому, откроется система управления тестами.
 
 ![This is an image](/media/screens/jenkins_1.png)
 ---
@@ -96,3 +95,34 @@ TestOps**, кликнув по которому, откроется систем
 
 ## <img width="4%" style="vertical-align:middle" title="Allure Report" src="media/logo/Allure_Report.svg"> Пример Allure-отчета
 
+![This is an image](/media/screens/Allure_Report_1.png)
+
+### Результат выполнения теста
+Содержание:
+* Шаги теста
+* Скриншот страницы на последнем шаге
+* Page Source
+* Логи браузерной консоли
+* Видео прогона автотестов
+
+![This is an image](/media/screens/Allure_Report_2.png)
+----
+
+## <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="media/logo/AllureTestOps.svg"> Интеграция с Allure TestOps
+Пример dashboard с общими результатами тестирования:<br />
+![This is an image](/media/screens/Allure_TestOps_1.png)<br />
+Общий список всех кейсов:<br />
+![This is an image](/media/screens/Allure_TestOps_2.png)<br />
+Тест-планы проекта:<br />
+![This is an image](/media/screens/Allure_TestOps_3.png)<br />
+Пример отчёта выполнения одного из автотестов:<br />
+![This is an image](/media/screens/Allure_TestOps_4.png)
+___
+
+## <img width="4%" style="vertical-align:middle" title="Jira" src="media/logo/Jira.svg"> Интеграция с Jira
+Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>. В задаче отображаются прикреплённые к ней тест-кейсы:
+![This is an image](/media/screens/Jira_1.png)
+Также прикреплены результаты запусков/прохождения тестов.
+![This is an image](/media/screens/Jira_2.png)
+___
+## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в телеграм
