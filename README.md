@@ -38,7 +38,7 @@ ___
 
 ## :spiral_notepad: Список проверок
 
-### Web-тесты:
+### Web-тесты
 :white_check_mark: Авторизация по почте и паролю  <br />
 :white_check_mark: Отображение региона в результатах поиска вакансий при фильтрации по региону  (параметризованный тест)<br />
 :white_check_mark: Отображение специализаций для категории (параметризованный тест)<br />
@@ -49,25 +49,25 @@ ___
 
 ## :arrow_forward: Локальный запуск автотестов
 
-### На своем компьютере с параметрами сборки по умолчанию:
+### На своем компьютере с параметрами сборки по умолчанию
 
 ```
 gradle clean test
 ```
 
-### На своем компьютере с параметрами сборки из local.properties и credentials.properties:
+### На своем компьютере с параметрами сборки из local.properties и credentials.properties
 
 ```
 gradle clean test -Denvironment='local'
 ```
 
-### В selenoid с параметрами сборки из remote.properties и credentials.properties:
+### В selenoid с параметрами сборки из remote.properties и credentials.properties
 
 ```
 gradle clean test -Denvironment='remote'
 ```
 
-### На своем компьютере/в selenoid с указанием необходимых параметров сборки:
+### На своем компьютере/в selenoid с указанием необходимых параметров сборки
 
 ```
 gradle clean
@@ -95,7 +95,7 @@ ___
 
 ## <img width="4%" style="vertical-align:middle" title="Jenkins" src="media/logo/Jenkins.svg"> Запуск автотестов в Jenkins
 
-### Для запуска автотестов в Jenkins необходимо:
+### Для запуска автотестов в Jenkins необходимо
 1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/Students/job/C19-astashkina_ea-unit15_hw/">проект</a>
 2. Выбрать пункт **Собрать с параметрами**
 3. При необходимости изменить параметры, выбрав значения
@@ -159,7 +159,7 @@ ___
 
 ## <img width="4%" style="vertical-align:middle" title="Jira" src="media/logo/Jira.svg"> Интеграция с Jira
 
-### Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>. В задаче отображаются прикреплённые к ней тест-кейсы
+### Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>. В задаче отображаются прикреплённые к ней тест-кейсы:
 
 ![This is an image](/media/screens/Jira_1.png)
 
@@ -171,7 +171,7 @@ ___
 
 ## <img width="4%" style="vertical-align:middle" title="Telegram" src="media/logo/Telegram.svg"> Уведомления в Telegram
 
-### После завершения сборки, бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом
+### После завершения сборки, бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом:
 
 ![This is an image](/media/screens/Telegram.png)
 
