@@ -61,12 +61,6 @@ gradle clean test
 gradle clean test -Denvironment='local'
 ```
 
-### На удаленном браузере с параметрами сборки из remote.properties
-
-```
-gradle clean test -Denvironment='remote'
-```
-
 ### На локальном/удаленном браузере с указанием необходимых параметров сборки
 
 ```
