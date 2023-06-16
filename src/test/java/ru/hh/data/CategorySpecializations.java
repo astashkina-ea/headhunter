@@ -2,7 +2,7 @@ package ru.hh.data;
 
 public enum CategorySpecializations {
 
-    AUTOBISNESS("Автомобильный бизнес", "19", new String[]{"Автомойщик",
+    AUTO("Автомобильный бизнес", "19", new String[]{"Автомойщик",
             "Автослесарь, автомеханик", "Мастер-приемщик", "Менеджер по продажам, менеджер по работе с клиентами"
     }),
     ADMINISTRATIVE_STAFF("Административный персонал", "5", new String[]{"Администратор",
