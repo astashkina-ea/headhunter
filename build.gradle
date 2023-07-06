@@ -1,15 +1,19 @@
 plugins {
     id 'java-library'
     id 'io.qameta.allure' version '2.11.2'
+    id "io.freefair.lombok" version "6.0.0-m2"
 }
 
-group = 'ru.leroymerlin'
+group = 'ru.hh'
 version = '1.0-SNAPSHOT'
 
 def allureVersion = '2.22.1',
     junitVersion = '5.9.3',
     selenideVersion = '6.15.0',
-    slf4jVersion = '2.0.7'
+    restAssuredVersion = "5.3.0",
+    slf4jVersion = '2.0.7',
+    javafaker = "1.0.2",
+    owner = "1.0.4"
 
 repositories {
     mavenCentral()
@@ -37,10 +41,13 @@ dependencies {
     testImplementation(
             "com.codeborne:selenide:$selenideVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
-            "com.github.javafaker:javafaker:1.0.2",
+            "io.rest-assured:rest-assured:$restAssuredVersion",
+            "io.rest-assured:json-schema-validator:$restAssuredVersion",
+            "io.qameta.allure:allure-rest-assured:$allureVersion",
+            "com.github.javafaker:javafaker:$javafaker",
             "org.junit.jupiter:junit-jupiter:$junitVersion",
             "org.slf4j:slf4j-simple:$slf4jVersion",
-            'org.aeonbits.owner:owner:1.0.4'
+            "org.aeonbits.owner:owner:1.0.4"
     )
 }
 
