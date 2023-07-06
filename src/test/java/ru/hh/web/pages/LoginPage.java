@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class LoginPage {
 
-    private SelenideElement loginByPasswordButton = $("[data-qa='expand-login-by-password']"),
+    private final SelenideElement loginByPasswordButton = $("[data-qa='expand-login-by-password']"),
             emailField = $("[data-qa='login-input-username']"),
             passwordField = $("[data-qa='login-input-password']"),
             loginButton = $("[data-qa='account-login-submit']");

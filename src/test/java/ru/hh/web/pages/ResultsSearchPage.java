@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class ResultsSearchPage {
 
-    private ElementsCollection regionVacancies = $$("[data-qa='vacancy-serp__vacancy-address']");
+    private final ElementsCollection regionVacancies = $$("[data-qa='vacancy-serp__vacancy-address']");
 
     @Step("Проверить выбранный регион")
     public ResultsSearchPage checkSelectedRegionsInResults(String region) {
@@ -24,6 +24,13 @@ public class ResultsSearchPage {
     @Step("Проверить выбранный график работы")
     public ResultsSearchPage checkSelectedWorkScheduleCheckbox(String value) {
         String selector = String.format("[data-qa='serp__novafilter-schedule-%s']", value);
+        $(selector).shouldBe(checked);
+        return this;
+    }
+
+    @Step("Проверить выбранный тип занятости")
+    public ResultsSearchPage checkSelectedTypeOfEmploymentCheckbox(String value) {
+        String selector = String.format("[data-qa='serp__novafilter-employment-%s']", value);
         $(selector).shouldBe(checked);
         return this;
     }

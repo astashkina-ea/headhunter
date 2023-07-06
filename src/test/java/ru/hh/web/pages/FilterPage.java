@@ -10,7 +10,7 @@ import static java.time.Duration.ofSeconds;
 
 public class FilterPage {
 
-    private SelenideElement regionFilterField = $("[data-qa='advanced-search-region-add']"),
+    private final SelenideElement regionFilterField = $("[data-qa='advanced-search-region-add']"),
             regionSelectedList = $("[data-qa='advanced-search__selected-regions'] .bloko-tag-list"),
             regionRemoveButton = $("[data-qa='advanced-search__selected-regions'] .bloko-tag-list [data-qa='bloko-tag__cross']"),
             specializationsLink = $("[data-qa='resumesearch__profroles-switcher']"),
@@ -45,6 +45,14 @@ public class FilterPage {
     @Step("Установить чекбокс графика работы")
     public FilterPage setWorkScheduleCheckbox(String value) {
         String selector = String.format("[data-qa='advanced-search__schedule-item-label_%s']", value);
+        $(selector).scrollTo();
+        $(selector).click();
+        return this;
+    }
+
+    @Step("Установить чекбокс тип занятости")
+    public FilterPage setTypeOfEmploymentCheckbox(String value) {
+        String selector = String.format("[data-qa='advanced-search__employment-item-label_%s']", value);
         $(selector).scrollTo();
         $(selector).click();
         return this;

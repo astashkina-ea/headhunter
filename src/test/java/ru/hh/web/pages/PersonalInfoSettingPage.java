@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class PersonalInfoSettingPage {
 
-    private SelenideElement emailField = $("[data-template-name='email']");
+    private final SelenideElement emailField = $("[data-template-name='email']");
 
     @Step("Проверить почту на странице настроек личных данных")
     public PersonalInfoSettingPage checkEmailInPersonalInfoSetting(String email) {

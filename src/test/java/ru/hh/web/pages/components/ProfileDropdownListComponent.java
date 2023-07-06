@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class ProfileDropdownListComponent {
 
-    private SelenideElement settingButton = $("[data-qa='mainmenu_applicantSettings']");
+    private final SelenideElement settingButton = $("[data-qa='mainmenu_applicantSettings']");
 
     @Step("Выбрать раздел \"Настройки\"")
     public ProfileDropdownListComponent clickSettingButton() {

@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class NavigationComponent {
 
-    private SelenideElement profileIcon = $("[data-qa='mainmenu_applicantProfile']");
+    private final SelenideElement profileIcon = $("[data-qa='mainmenu_applicantProfile']");
 
     @Step("Нажать на икону профиля")
     public NavigationComponent clickProfileIcon() {

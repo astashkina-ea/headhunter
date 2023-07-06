@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Selenide.$$;
 
 public class SpecializationsModalComponent {
 
-    ElementsCollection specializationsList = $$("[data-qa*='bloko-tree-selector-items-category-'] span");
+    private final ElementsCollection specializationsList = $$("[data-qa*='bloko-tree-selector-items-category-'] span");
 
     @Step("Выбрать категорию")
     public SpecializationsModalComponent clickCategory(String id) {

@@ -9,6 +9,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.ValueSource;
 import ru.hh.web.data.CategorySpecializations;
+import ru.hh.web.data.TypeOfEmployment;
 import ru.hh.web.data.WorkSchedule;
 import ru.hh.web.pages.FilterPage;
 import ru.hh.web.pages.ResultsSearchPage;
@@ -49,7 +50,7 @@ public class FilterTests extends TestBase {
                 .checkSpecializationsList(category.getCategory());
     }
 
-    @Story("Специализации в фильтрах")
+    @Story("Чекбокс график работы")
     @Severity(SeverityLevel.NORMAL)
     @EnumSource(value = WorkSchedule.class)
     @DisplayName("Проверка на странице результов поиска установленного чекбокса")
@@ -59,5 +60,17 @@ public class FilterTests extends TestBase {
                 .setWorkScheduleCheckbox(workSchedule.getSelector())
                 .clickSearchSubmitButton();
         resultsSearchPage.checkSelectedWorkScheduleCheckbox(workSchedule.getSelector());
+    }
+
+    @Story("Чекбокс тип занятости")
+    @Severity(SeverityLevel.NORMAL)
+    @EnumSource(value = TypeOfEmployment.class)
+    @DisplayName("Проверка на странице результов поиска установленного чекбокса")
+    @ParameterizedTest(name = "\"{0}\" в блоке \"Тип занятости\"")
+    void checkSelectedTypeOfEmploymentCheckboxTest(TypeOfEmployment typeOfEmployment) {
+        filterPage.openPage()
+                .setTypeOfEmploymentCheckbox(typeOfEmployment.getSelector())
+                .clickSearchSubmitButton();
+        resultsSearchPage.checkSelectedTypeOfEmploymentCheckbox(typeOfEmployment.getSelector());
     }
 }

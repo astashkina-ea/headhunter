@@ -20,7 +20,6 @@ public class LoginTest extends TestBase {
 
     private static CredentialsConfig config = ConfigFactory.create(CredentialsConfig.class, System.getProperties());
 
-
     LoginPage loginPage = new LoginPage();
     NavigationComponent navigationComponent = new NavigationComponent();
     ProfileDropdownListComponent profileDropdownListComponent = new ProfileDropdownListComponent();

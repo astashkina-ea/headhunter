@@ -7,7 +7,8 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
 
-    private SelenideElement regionLink = $("[data-page-analytics-event='vacancy_search_region']");
+    private final SelenideElement regionLink = $("[data-page-analytics-event='vacancy_search_region']"),
+            signUbButton = $("[data-qa='signup']");
 
     @Step("Открыть главную страницу")
     public MainPage openPage() {
@@ -18,6 +19,12 @@ public class MainPage {
     @Step("Нажать на регион")
     public MainPage clickRegionLink() {
         regionLink.click();
+        return this;
+    }
+
+    @Step("Нажать на кнопку \"Созадать резюме\"")
+    public MainPage clickSignUbButton() {
+        signUbButton.click();
         return this;
     }
 }
