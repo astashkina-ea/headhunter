@@ -17,7 +17,7 @@ public class MainPageTests extends TestBase{
     MainPage mainPage = new MainPage();
     SignUpPage signUpPage = new SignUpPage();
 
-    @Tag("smoke")
+    @Tag("web")
     @Story("Регистрация")
     @Severity(SeverityLevel.CRITICAL)
     @Test

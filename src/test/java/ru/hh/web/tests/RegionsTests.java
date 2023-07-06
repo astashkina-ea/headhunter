@@ -17,7 +17,7 @@ public class RegionsTests extends TestBase {
     MainPage mainPage = new MainPage();
     RegionsModalComponent regionsModalComponent = new RegionsModalComponent();
 
-    @Tag("smoke")
+    @Tag("web")
     @Story("Модалка регионов")
     @Severity(SeverityLevel.CRITICAL)
     @Test

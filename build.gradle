@@ -66,8 +66,14 @@ test {
     useJUnitPlatform()
 }
 
-task smoke_test(type: Test) {
+task web_test(type: Test) {
     useJUnitPlatform{
-        includeTags("smoke")
+        includeTags("web")
+    }
+}
+
+task api_test(type: Test) {
+    useJUnitPlatform{
+        includeTags("api")
     }
 }

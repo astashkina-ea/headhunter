@@ -28,7 +28,7 @@ public class LoginTest extends TestBase {
     String emailValue = config.getLoginAccount();
     String passwordValue = config.getPasswordAccount();
 
-    @Tag("smoke")
+    @Tag("web")
     @Story("Авторизация по почте")
     @Severity(SeverityLevel.CRITICAL)
     @Test

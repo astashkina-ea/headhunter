@@ -1,6 +1,7 @@
 package ru.hh.api.tests;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ru.hh.api.data.enums.TypeErrors;
 import ru.hh.api.models.ForbbidenErrorModel;
@@ -13,6 +14,7 @@ import static ru.hh.api.utils.RandomUtils.getRandomBetweenNumber;
 @DisplayName("Метод удаления вакансий")
 public class DeleteFavoritedVacancyTests {
 
+    @Tag("api")
     @Test
     @DisplayName("Отсутствие доступа на удаление вакансии из списка отобранных неавторизованным пользователем")
     void deleteFavoritedVacancyWithForbbidenErrorTest() {

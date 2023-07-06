@@ -1,6 +1,7 @@
 package ru.hh.api.tests;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
@@ -24,6 +25,7 @@ import static ru.hh.api.utils.RandomUtils.getRandomElementFromList;
 @DisplayName("Метод получения вакансий")
 public class GetVacanciesTests {
 
+    @Tag("api")
     @EnumSource(value = Areas.class)
     @DisplayName("Поиск вакансий по региону")
     @ParameterizedTest(name = "\"{0}\"")
@@ -46,6 +48,7 @@ public class GetVacanciesTests {
         });
     }
 
+    @Tag("api")
     @Test
     @DisplayName("Поиск вакансий по рандомной занятости")
     void getVacanciesByScheduleTest() {

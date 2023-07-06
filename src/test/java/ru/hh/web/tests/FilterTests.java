@@ -5,6 +5,7 @@ import io.qameta.allure.Story;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -23,6 +24,7 @@ public class FilterTests extends TestBase {
     ResultsSearchPage resultsSearchPage = new ResultsSearchPage();
     SpecializationsModalComponent specializationsModalComponent = new SpecializationsModalComponent();
 
+    @Tag("web")
     @Story("Регионы в фильтрах")
     @Severity(SeverityLevel.NORMAL)
     @ValueSource(strings = {
@@ -38,6 +40,7 @@ public class FilterTests extends TestBase {
         resultsSearchPage.checkSelectedRegionsInResults(region);
     }
 
+    @Tag("web")
     @Story("Специализации в фильтрах")
     @Severity(SeverityLevel.NORMAL)
     @EnumSource(value = CategorySpecializations.class)
@@ -50,6 +53,7 @@ public class FilterTests extends TestBase {
                 .checkSpecializationsList(category.getCategory());
     }
 
+    @Tag("web")
     @Story("Чекбокс график работы")
     @Severity(SeverityLevel.NORMAL)
     @EnumSource(value = WorkSchedule.class)
@@ -62,6 +66,7 @@ public class FilterTests extends TestBase {
         resultsSearchPage.checkSelectedWorkScheduleCheckbox(workSchedule.getSelector());
     }
 
+    @Tag("web")
     @Story("Чекбокс тип занятости")
     @Severity(SeverityLevel.NORMAL)
     @EnumSource(value = TypeOfEmployment.class)

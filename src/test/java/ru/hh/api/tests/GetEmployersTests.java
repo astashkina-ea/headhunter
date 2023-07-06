@@ -1,6 +1,7 @@
 package ru.hh.api.tests;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import ru.hh.api.data.enums.Areas;
 import ru.hh.api.models.EmployersModal;
@@ -17,6 +18,7 @@ import static ru.hh.api.service.GetEmployersApi.getEmployers;
 @DisplayName("Метод получения работодателей")
 public class GetEmployersTests {
 
+    @Tag("api")
     @Test
     @DisplayName("Проверка возвращаемых параметров в методе GET /employers")
     void getEmployersByDifferentParams() {
