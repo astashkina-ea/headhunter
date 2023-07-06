@@ -11,7 +11,7 @@ import ru.hh.web.pages.MainPage;
 import ru.hh.web.pages.SignUpPage;
 
 @Feature("Главная страница")
-@DisplayName("Главная страница")gjn
+@DisplayName("Главная страница")
 public class MainPageTests extends TestBase{
 
     MainPage mainPage = new MainPage();
