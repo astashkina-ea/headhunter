@@ -12,7 +12,7 @@ public class PostNegotiationsApi {
         return given(requestSpec)
                 .body(negotiation)
                 .when()
-                .get("/negotiations")
+                .post("/negotiations")
                 .then()
                 .spec(response403Spec)
                 .extract()

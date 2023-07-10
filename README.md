@@ -142,10 +142,6 @@ Report</code>, кликнув по которому, откроется стра
 
 ## <img width="4%" style="vertical-align:middle" title="Allure Report" src="media/logo/Allure_Report.svg"> Пример Allure-отчета
 
-### Главная страница Allure-отчета
-
-![This is an image](/media/screens/Allure_Report_1.png)
-
 ### Пример отчёта выполнения одного из автотестов
 
 Содержит в себе:
@@ -186,11 +182,6 @@ Report</code>, кликнув по которому, откроется стра
 #### Api-тесты
 
 ![This is an image](/media/screens/Allure_TestOps_2_2.png)
-
-### Тест-планы проекта
-
-![This is an image](/media/screens/Allure_TestOps_3.png)
-
 
 ___
 
