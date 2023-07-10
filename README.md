@@ -187,13 +187,9 @@ ___
 
 ## <img width="4%" style="vertical-align:middle" title="Jira" src="media/logo/Jira.svg"> Интеграция с Jira
 
-### Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>. В задаче отображаются прикреплённые к ней тест-кейсы
+### Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>. В задаче отображаются прикреплённые к ней тест-кейсы и также прикреплены результаты запусков/прохождения тестов
 
 ![This is an image](/media/screens/Jira_1.png)
-
-### Также прикреплены результаты запусков/прохождения тестов
-
-![This is an image](/media/screens/Jira_2.png)
 
 ___
 
