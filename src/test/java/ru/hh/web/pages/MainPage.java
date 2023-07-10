@@ -16,12 +16,6 @@ public class MainPage {
         return this;
     }
 
-    @Step("Нажать на регион")
-    public MainPage clickRegionLink() {
-        regionLink.click();
-        return this;
-    }
-
     @Step("Нажать на кнопку \"Созадать резюме\"")
     public MainPage clickSignUbButton() {
         signUbButton.click();
