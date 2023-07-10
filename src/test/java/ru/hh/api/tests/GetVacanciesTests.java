@@ -33,11 +33,11 @@ public class GetVacanciesTests {
         Map<String, String> queryParam = new HashMap<>();
         queryParam.put("area", area.getId());
 
-        VacanciesModel vacanciesModel = step("Выполнить вызов метода на получение вакансий по региону " + area.getId(), () ->
+        VacanciesModel vacanciesModel = step("Выполнить вызов метода на получение вакансий по региону " + area.getName(), () ->
                 getVacancies(queryParam));
 
         List<ItemsVacanciesModel> vacancies = vacanciesModel.getItems();
-        step("Проверить, что в каждой вакансии отображается возвращается переданный регион " + area.getId(), () -> {
+        step("Проверить, что в каждой вакансии отображается возвращается переданный регион " + area.getName(), () -> {
             for (ItemsVacanciesModel vacancy : vacancies) {
                 assertAll(
                         () -> assertEquals(area.getId(), vacancy.getArea().getId()),
@@ -63,7 +63,7 @@ public class GetVacanciesTests {
                 getVacancies(queryParam));
 
         List<ItemsVacanciesModel> vacancies = vacanciesModel.getItems();
-        step("Проверить, что в каждой вакансии отображается возвращается переданная занятость" + employment.getName(), () -> {
+        step("Проверить, что в каждой вакансии отображается возвращается переданная занятость " + employment.getName(), () -> {
             for (ItemsVacanciesModel vacancy : vacancies) {
                 assertAll(
                         () -> assertEquals(employment.getId(), vacancy.getEmployment().getId()),

@@ -21,7 +21,7 @@ public class DeleteFavoritedVacancyTests {
         String idVacancy = String.format("%d", getRandomBetweenNumber(1, 100000));
 
         ForbbidenErrorModel forbbidenErrorModel = step("Выполнить вызов метода на удаление вакансии", () -> deleteFavoritedVacancyWithForbbidenError(idVacancy));
-        step("Проверить, что возврращается тело ответа с ошибкой типа forbidden", () -> {
+        step("Проверить, что возвращается тело ответа с ошибкой типа forbidden", () -> {
             assertAll(
                     () -> assertEquals(TypeErrors.FORBIDDEN.getText(), forbbidenErrorModel.getErrors().get(0).getType()),
                     () -> assertTrue(!forbbidenErrorModel.getIdRequest().isEmpty())

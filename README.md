@@ -19,18 +19,20 @@ ___
 
 ## :computer: Используемый стек
 
-| <a href="https://www.jetbrains.com/idea/"><img src="media/logo/Intelij_IDEA.svg" width="40" height="40"  alt="IDEA"/></a> | <a href="https://www.jetbrains.com/idea/"><img src="media/logo/Java.svg" width="40" height="40"  alt="Java"/></a> | <a href="https://www.jetbrains.com/idea/"><img src="media/logo/JUnit5.svg" width="40" height="40"  alt="JUnit 5"/></a> |                      <a href="https://www.jetbrains.com/idea/"><img src="media/logo/Gradle.svg" width="40" height="40"  alt="Gradle"/></a>                      | <a href="https://www.jetbrains.com/idea/"><img src="media/logo/Selenide.svg" width="40" height="40"  alt="Selenide"/></a> |
-|:-------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|                                                           IDEA                                                            |                                                       Java                                                        |                                                         Junit5                                                         |                                                                        Gradle                                                                        |                                                                         Selenide                                                                          |
+| <a href="https://www.jetbrains.com/idea/"><img src="media/logo/Intelij_IDEA.svg" width="40" height="40"  alt="IDEA"/></a> | <a href="https://www.java.com/"><img src="media/logo/Java.svg" width="40" height="40"  alt="Java"/></a> | <a href="https://junit.org/"><img src="media/logo/JUnit5.svg" width="40" height="40"  alt="JUnit 5"/></a> |                      <a href="https://gradle.org/"><img src="media/logo/Gradle.svg" width="40" height="40"  alt="Gradle"/></a>                      | <a href="https://selenide.org/"><img src="media/logo/Selenide.svg" width="40" height="40"  alt="Selenide"/></a> | <a href="https://rest-assured.io/"><img src="media/logo/RestAssured.svg" width="40" height="40"  alt="Selenide"/></a> |
+|:-------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------:|
+|                                                           IDEA                                                            |                                                       Java                                                        |                                                         Junit5                                                         |                                                                        Gradle                                                                        |                                                                         Selenide                                                                          |                                                     Rest-assured                                                      |
 
 | <a href="https://www.jetbrains.com/idea/"><img src="media/logo//Selenoid.svg" width="40" height="40"  alt="Selenoid"/></a> |                <a href="https://www.jetbrains.com/idea/"><img src="media/logo/Allure_Report.svg" width="40" height="40"  alt="Allure"/></a>                 | <a href="https://www.jetbrains.com/idea/"><img src="media/logo/AllureTestOps.svg" width="40" height="40"  alt="Allure TestOps"/></a> | <a href="https://www.jetbrains.com/idea/"><img src="media/logo/Jenkins.svg" width="40" height="40"  alt="Jenkins"/></a> | <a href="https://www.jetbrains.com/idea/"><img src="media/logo/GitHub.svg" width="40" height="40"  alt="Github"/></a> | <a href="https://www.jetbrains.com/idea/"><img src="media/logo/Jira.svg" width="40" height="40"  alt="Jira"/></a> |
 |:---------------------------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------:|
 |                                                                         Selenoid                                                                          |                                                                           Allure                                                                            |                                                              Allure TO                                                               |                                                         Jenkins                                                         |                                                        Github                                                         |                                                                       Jira                                                                        |
 
-- Тесты в данном проекте написаны на языке <code>Java</code> с использованием фреймворка для тестирования <code>Selenide</code> в среде разработки <code>IDEA</code>
+- Тесты в данном проекте написаны на языке <code>Java</code> и разработаны в среде разработки <code>IDEA</code>
+- Для UI тестов при написании использовалcя фреймворка для тестирования <code>Selenide</code> 
+- При прогоне тестов браузер запускается в <code>Selenoid</code>
+- Для API тестов при написании использовалась библиотеке для тестирования <code>Rest-assured</code>
 - В качестве сборщика был использован - <code>Gradle</code>
 - <code>JUnit 5</code> задействован в качестве фреймворка модульного тестирования
-- При прогоне тестов браузер запускается в <code>Selenoid</code>
 - Для удаленного запуска реализована джоба в <code>Jenkins</code> с формированием <code>Allure-отчета</code> и отправкой результатов в <code>Telegram</code> при помощи бота
 - Осуществлена интеграция с <code>Allure TestOps</code> и <code>Jira</code>
 
@@ -40,32 +42,42 @@ ___
 
 ### Web-тесты
 :white_check_mark: Авторизация по почте и паролю  <br />
-:white_check_mark: Отображение региона в результатах поиска вакансий при фильтрации по региону  (параметризованный тест)<br />
+:white_check_mark: Переход на страницу регистрации  <br />
+:white_check_mark: Отображение региона в результатах поиска вакансий при фильтрации по региону (параметризованный тест)<br />
 :white_check_mark: Отображение специализаций для категории (параметризованный тест)<br />
-:white_check_mark: Проверка на странице результов поиска установленного чекбокса в блоке "График работы"  (параметризованный тест)<br />
-:white_check_mark: Проверка открытия и закрытия модалки региона
+:white_check_mark: Проверка на странице результов поиска установленного чекбокса в блоке "График работы" (параметризованный тест)<br />
+:white_check_mark: Отображение на странице фильтрации чекбоксов для блока "Тип занятости" (c зависимостью от API запроса)
+:white_check_mark: Проверка на странице результов поиска установленного чекбокса в блоке "Тип занятости" (параметризованный тест)<br />
+
+
+### Api-тесты
+:white_check_mark: Отсутствие доступа на отклик на определенную вакансию неавторизованным пользователем <br />
+:white_check_mark: Отсутствие доступа на удаление вакансии из списка отобранных неавторизованным пользователем <br />
+:white_check_mark: Поиск вакансий по рандомной занятости <br />
+:white_check_mark: Поиск вакансий по региону (параметризованный тест)<br />
+:white_check_mark: Проверка возвращаемых параметров в методе GET /employers<br />
 
 ___
 
 ## :arrow_forward: Локальный запуск автотестов
 
-### На локальном бразуере с параметрами сборки по умолчанию
+### Web-тесты на локальном бразуере с параметрами сборки по умолчанию
 
 ```
-gradle clean test
+gradle clean web
 ```
 
-### На локальном браузере с параметрами сборки из local.properties
+### Web-тесты на локальном браузере с параметрами сборки из local.properties
 
 ```
-gradle clean test -Denvironment='local'
+gradle clean web -Denvironment='local'
 ```
 
-### На локальном/удаленном браузере с указанием необходимых параметров сборки
+### Web-тесты на локальном/удаленном браузере с указанием необходимых параметров сборки
 
 ```
 gradle clean
-TASK
+web
 -DbaseUrl=BASE_URL
 -Dbrowser=BROWSER
 -DbrowserVersion=BROWSER_VERSION
@@ -76,7 +88,6 @@ TASK
 ```
 
 где:
->- <code>TASK</code> - название таски test или smoke
 >- <code>BASE_URL</code> - адрес тестового стенда (по умолчанию https://hh.ru)
 >- <code>BROWSER</code> - браузер, в котором будут выполняться тесты (по умолчанию chrome)
 >- <code>BROWSER_VERSION</code> - версия браузера (по умолчанию 100.0)
@@ -84,6 +95,29 @@ TASK
 >- <code>REMOTE_URL</code> - адрес для удаленного запуска тестов
 >- <code>LOGIN_ACCOUNT</code> - логин тестового аккаунта (по умолчанию в credentials.properties)
 >- <code>PASSWORD_ACCOUNT</code> - пароль тествого аккаунта (по умолчанию в credentials.properties)
+
+### Api-тесты с параметрами сборки по умолчанию
+
+```
+gradle clean api 
+```
+
+### Web-тесты на локальном/удаленном браузере с указанием необходимых параметров сборки
+
+```
+gradle clean
+TASK
+-DbaseApiUrl=BASE_API_URL
+```
+
+где:
+>- <code>BASE_API_URL</code> - адрес тестового стенда (по умолчанию https://api.hh.ru)
+
+### Запуск всех тестов
+
+```
+gradle clean test
+```
 
 ___
 
@@ -121,7 +155,13 @@ Report</code>, кликнув по которому, откроется стра
 - Логи браузерной консоли
 - Видео прогона автотестов
 
-![This is an image](/media/screens/Allure_Report_2.png)
+#### Web-тесты
+
+![This is an image](/media/screens/Allure_Report_2_1.png)
+
+#### Api-тесты
+
+![This is an image](/media/screens/Allure_Report_2_2.png)
 
 ----
 
@@ -129,15 +169,7 @@ Report</code>, кликнув по которому, откроется стра
 
 ### Dashboard с общими результатами тестирования
 
-![This is an image](/media/screens/Allure_TestOps_1.png)<br />
-
-### Общий список всех кейсов
-
-![This is an image](/media/screens/Allure_TestOps_2.png)<br />
-
-### Тест-планы проекта
-
-![This is an image](/media/screens/Allure_TestOps_3.png)<br />
+![This is an image](/media/screens/Allure_TestOps_1.png)
 
 ### Пример отчёта выполнения одного из автотестов
 Содержит в себе:
@@ -147,7 +179,18 @@ Report</code>, кликнув по которому, откроется стра
 - Логи браузерной консоли
 - Видео прогона автотестов
 
-![This is an image](/media/screens/Allure_TestOps_4.png)
+#### Web-тесты
+
+![This is an image](/media/screens/Allure_TestOps_2_1.png)
+
+#### Api-тесты
+
+![This is an image](/media/screens/Allure_TestOps_2_2.png)
+
+### Тест-планы проекта
+
+![This is an image](/media/screens/Allure_TestOps_3.png)
+
 
 ___
 
@@ -167,7 +210,13 @@ ___
 
 ### После завершения сборки, бот, созданный в <code>Telegram</code>, автоматически обрабатывает и отправляет сообщение с результатом
 
-![This is an image](/media/screens/Telegram.png)
+#### Web-тесты
+
+![This is an image](/media/screens/Telegram_2.png)
+
+#### Api-тесты
+
+![This is an image](/media/screens/Telegram_2.png)
 
 ___
 
@@ -175,6 +224,6 @@ ___
 
 ### Для всех тестов записано видео с прохождением тестов
 
-![This is an gif](/media/screens/selenoid.gif)
+![This is an gif](/media/screens/selenoid_1.gif)
 
 ---
