@@ -1,12 +1,15 @@
 package ru.hh.api.data.enums;
 
+import org.aeonbits.owner.ConfigFactory;
+import ru.hh.api.config.ApiConfig;
+
 public enum Areas {
 
-    MSK("1", "Москва", "https://api.hh.ru/areas/1"),
-    SPB("2", "Санкт-Петербург", "https://api.hh.ru/areas/2"),
-    EKB("3", "Екатеринбург", "https://api.hh.ru/areas/3"),
-    NSK("4", "Новосибирск", "https://api.hh.ru/areas/4"),
-    PNZ("71", "Пенза", "https://api.hh.ru/areas/71");
+    MSK("1", "Москва", "/areas/1"),
+    SPB("2", "Санкт-Петербург", "/areas/2"),
+    EKB("3", "Екатеринбург", "/areas/3"),
+    NSK("4", "Новосибирск", "/areas/4"),
+    PNZ("71", "Пенза", "/areas/71");
 
     private String id;
     private String name;
@@ -27,6 +30,7 @@ public enum Areas {
     }
 
     public String getUrl() {
-        return url;
+        ApiConfig config = ConfigFactory.create(ApiConfig.class, System.getProperties());
+        return config.getBaseApiUrl() + url;
     }
 }

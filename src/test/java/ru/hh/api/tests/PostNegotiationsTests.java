@@ -26,7 +26,8 @@ public class PostNegotiationsTests {
         requestBody.setIdResume(String.format("%d", getRandomBetweenNumber(1, 100000)));
         requestBody.setMessage(getRandomText());
 
-        ForbbidenErrorModel forbbidenErrorModel = step("Выполнить вызов метода на отклик на определенную вакансию", () -> postNegotiationsWithForbbidenError(requestBody));
+        ForbbidenErrorModel forbbidenErrorModel = step("Выполнить вызов метода на отклик на определенную вакансию", () ->
+                postNegotiationsWithForbbidenError(requestBody));
         step("Проверить, что возвращается тело ответа с ошибкой типа forbidden", () -> {
             assertAll(
                     () -> assertEquals(TypeErrors.FORBIDDEN.getText(), forbbidenErrorModel.getErrors().get(0).getType()),

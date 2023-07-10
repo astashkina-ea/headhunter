@@ -12,7 +12,6 @@ public class RandomUtils {
         return faker.random().nextInt(min, max);
     }
 
-
     public static String getRandomText() {
         return faker.harryPotter().quote();
     }

@@ -10,7 +10,7 @@ public class DeleteFavoritedVacancyApi {
     public static ForbbidenErrorModel deleteFavoritedVacancyWithForbbidenError(String idVacancy) {
         return given(requestSpec)
                 .when()
-                .delete("/vacancies/favorited/" + idVacancy)
+                .delete(String.format("/vacancies/favorited/%s",idVacancy))
                 .then()
                 .spec(response403Spec)
                 .extract()

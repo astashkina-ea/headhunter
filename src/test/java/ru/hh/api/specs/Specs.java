@@ -6,10 +6,10 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.aeonbits.owner.ConfigFactory;
 import ru.hh.api.config.ApiConfig;
-import ru.hh.api.helpers.CustomAllureListener;
 
 import static io.restassured.RestAssured.with;
 import static io.restassured.filter.log.LogDetail.*;
+import static ru.hh.api.helpers.CustomAllureListener.withCustomTemplates;
 
 public class Specs {
 
@@ -18,7 +18,7 @@ public class Specs {
     public static RequestSpecification requestSpec = with()
             .log().uri()
             .log().body()
-            .filter(CustomAllureListener.withCustomTemplates())
+            .filter(withCustomTemplates())
             .contentType(ContentType.JSON)
             .baseUri(config.getBaseApiUrl());
 
