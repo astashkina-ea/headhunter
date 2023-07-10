@@ -8,6 +8,6 @@ import org.aeonbits.owner.Config;
 
 public interface ApiConfig extends Config {
     @Key("baseApiUrl")
-    @DefaultValue("https://demowebshop.tricentis.com")
+    @DefaultValue("https://api.hh.ru")
     String getBaseApiUrl();
 }

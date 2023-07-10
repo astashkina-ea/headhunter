@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 @Data
-public class EmployersModal {
+public class EmployersModel {
 
 	@JsonProperty("per_page")
 	private int perPage;

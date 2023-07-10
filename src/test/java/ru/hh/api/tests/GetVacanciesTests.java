@@ -9,7 +9,7 @@ import ru.hh.api.data.enums.Areas;
 import ru.hh.api.models.DictionariesModel;
 import ru.hh.api.models.VacanciesModel;
 import ru.hh.api.models.ItemsVacanciesModel;
-import ru.hh.api.models.EmploymentModels;
+import ru.hh.api.models.EmploymentModel;
 
 import java.util.HashMap;
 import java.util.List;
@@ -53,8 +53,8 @@ public class GetVacanciesTests {
     @DisplayName("Поиск вакансий по рандомной занятости")
     void getVacanciesByScheduleTest() {
         DictionariesModel dictionariesModel = getDictionaries();
-        List<EmploymentModels> employments = dictionariesModel.getEmployment();
-        EmploymentModels employment = getRandomElementFromList(employments);
+        List<EmploymentModel> employments = dictionariesModel.getEmployment();
+        EmploymentModel employment = getRandomElementFromList(employments);
 
         Map<String, String> queryParam = new HashMap<>();
         queryParam.put("employment", employment.getId());

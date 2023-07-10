@@ -9,5 +9,6 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class DictionariesModel {
 
-	private List<EmploymentModels> employment;
+	private List<EmploymentModel> employment;
+	private List<ScheduleModel> schedule;
 }

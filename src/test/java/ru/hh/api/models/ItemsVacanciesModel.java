@@ -8,5 +8,5 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class ItemsVacanciesModel {
 
 	private AreaModel area;
-	private EmploymentModels employment;
+	private EmploymentModel employment;
 }

@@ -1,12 +1,18 @@
 package ru.hh.web.pages;
 
+import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
+import ru.hh.api.models.DictionariesModel;
+import ru.hh.api.models.ScheduleModel;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import java.util.List;
+
+import static com.codeborne.selenide.Selenide.*;
 import static java.time.Duration.ofSeconds;
+import static ru.hh.api.service.GetDictionariesApi.getDictionaries;
 
 public class FilterPage {
 
@@ -15,6 +21,8 @@ public class FilterPage {
             regionRemoveButton = $("[data-qa='advanced-search__selected-regions'] .bloko-tag-list [data-qa='bloko-tag__cross']"),
             specializationsLink = $("[data-qa='resumesearch__profroles-switcher']"),
             searchSubmitButton = $("[data-qa='advanced-search-submit-button']");
+
+    private final ElementsCollection employmentCheckboxes = $$("[data-qa*='advanced-search__schedule-item-label_']");
 
     @Step("Открыть страницу фильтрации")
     public FilterPage openPage() {
@@ -55,6 +63,18 @@ public class FilterPage {
         String selector = String.format("[data-qa='advanced-search__employment-item-label_%s']", value);
         $(selector).scrollTo();
         $(selector).click();
+        return this;
+    }
+
+    @Step("Проверить чекбоксы графика работы на странице фильтров")
+    public FilterPage checkCheckboxesScheduleOnFilterPage() {
+        DictionariesModel dictionariesModel = getDictionaries();
+        List<ScheduleModel> schedules = dictionariesModel.getSchedule();
+
+        for (ScheduleModel schedule : schedules) {
+            String name = schedule.getName();
+            employmentCheckboxes.shouldHave(CollectionCondition.itemWithText(name));
+        }
         return this;
     }
 }

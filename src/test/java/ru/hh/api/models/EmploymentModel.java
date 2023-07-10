@@ -3,7 +3,7 @@ package ru.hh.api.models;
 import lombok.Data;
 
 @Data
-public class EmploymentModels {
+public class EmploymentModel {
 
     private String id;
     private String name;

@@ -6,6 +6,7 @@ import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -77,5 +78,15 @@ public class FilterTests extends TestBase {
                 .setTypeOfEmploymentCheckbox(typeOfEmployment.getSelector())
                 .clickSearchSubmitButton();
         resultsSearchPage.checkSelectedTypeOfEmploymentCheckbox(typeOfEmployment.getSelector());
+    }
+
+    @Tag("web")
+    @Story("Чекбокс тип занятости")
+    @Severity(SeverityLevel.NORMAL)
+    @DisplayName("Отображение на странице фильтрации чекбоксов для блока \"Тип занятости\"")
+    @Test
+    void checkCheckboxesScheduleOnFilterPageTest() {
+        filterPage.openPage()
+                .checkCheckboxesScheduleOnFilterPage();
     }
 }
