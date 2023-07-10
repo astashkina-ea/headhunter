@@ -123,7 +123,7 @@ ___
 
 ## <img width="4%" style="vertical-align:middle" title="Jenkins" src="media/logo/Jenkins.svg"> Запуск автотестов в Jenkins
 
-### Для запуска автотестов в Jenkins необходимо
+### Для запуска автотестов в <code>Jenkins</code> необходимо
 1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/Students/job/C19-astashkina_ea-unit15_hw/">проект</a>
 2. Выбрать пункт **Собрать с параметрами**
 3. При необходимости изменить параметры, выбрав значения
