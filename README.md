@@ -28,7 +28,7 @@ ___
 |                                                                         Selenoid                                                                          |                                                                           Allure                                                                            |                                                              Allure TO                                                               |                                                         Jenkins                                                         |                                                        Github                                                         |                                                                       Jira                                                                        |
 
 - Тесты в данном проекте написаны на языке <code>Java</code> и разработаны в среде разработки <code>IDEA</code>
-- Для UI тестов при написании использовалcя фреймворка для тестирования <code>Selenide</code> 
+- Для UI тестов при написании использовалась библиотека для тестирования <code>Selenide</code> 
 - При прогоне тестов браузер запускается в <code>Selenoid</code>
 - Для API тестов при написании использовалась библиотеке для тестирования <code>Rest-assured</code>
 - В качестве сборщика был использован <code>Gradle</code>
@@ -142,7 +142,7 @@ Report</code>, кликнув по которому, откроется стра
 
 ## <img width="4%" style="vertical-align:middle" title="Allure Report" src="media/logo/Allure_Report.svg"> Пример Allure-отчета
 
-### Пример отчёта выполнения одного из автотестов
+### <a target="_blank" href="https://jenkins.autotests.cloud/job/C19-astashkina_ea-project/16/allure/">Пример</a> отчёта выполнения одного из автотестов
 
 Содержит в себе:
 - Шаги теста
@@ -163,7 +163,7 @@ Report</code>, кликнув по которому, откроется стра
 
 ## <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="media/logo/AllureTestOps.svg"> Интеграция с Allure TestOps
 
-### Dashboard с общими результатами тестирования
+### <a target="_blank" href="https://allure.autotests.cloud/project/3478/dashboards">Dashboard</a> с общими результатами тестирования
 
 ![This is an image](/media/screens/Allure_TestOps_1.png)
 
@@ -187,7 +187,7 @@ ___
 
 ## <img width="4%" style="vertical-align:middle" title="Jira" src="media/logo/Jira.svg"> Интеграция с Jira
 
-### Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>. В задаче отображаются прикреплённые к ней тест-кейсы и также прикреплены результаты запусков/прохождения тестов
+### Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>. <a target="_blank" href="https://allure.autotests.cloud/project/3478/dashboards">В задаче</a> отображаются прикреплённые к ней тест-кейсы и также прикреплены результаты запусков/прохождения тестов
 
 ![This is an image](/media/screens/Jira_1.png)
 
@@ -209,7 +209,9 @@ ___
 
 ## <img width="4%" style="vertical-align:middle" title="Selenoid" src="media/logo/Selenoid.svg"> Видео с запуском тестов
 
-### Для всех тестов записано видео с прохождением тестов
+### Для всех тестов записано видео
+
+####  К примеру, web-тест "Авторизация по почте и паролю"
 
 ![This is an gif](/media/screens/selenoid_1.gif)
 

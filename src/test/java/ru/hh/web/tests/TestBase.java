@@ -17,7 +17,7 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
 
-    private static WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
+    public static WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
 
     @BeforeAll
     static void beforeAll() {
@@ -28,8 +28,8 @@ public class TestBase {
         Configuration.browserVersion = config.getBrowserVersion();
         Configuration.browserSize = config.getBrowserSize();
 
-        if (config.getRemoteURL() != null) {
-            Configuration.remote = config.getRemoteURL();
+        if (config.getRemoteURL() != null && config.getPasswordRemote() != null && config.getLoginRemote() != null) {
+            Configuration.remote = String.format("https://%s:%s@%s/wd/hub", config.getLoginRemote(), config.getPasswordRemote(), config.getRemoteURL());
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                     "enableVNC", true,
@@ -49,7 +49,9 @@ public class TestBase {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
-        Attach.addVideo();
+        if (config.getRemoteURL() != null && config.getPasswordRemote() != null && config.getLoginRemote() != null) {
+            Attach.addVideo();
+        }
         closeWebDriver();
     }
 }

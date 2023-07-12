@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class AreaModel {
 
-	private String id;
-	private String name;
-	private String url;
+    private String id;
+    private String name;
+    private String url;
 }

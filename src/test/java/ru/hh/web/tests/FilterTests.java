@@ -80,11 +80,11 @@ public class FilterTests extends TestBase {
         resultsSearchPage.checkSelectedTypeOfEmploymentCheckbox(typeOfEmployment.getSelector());
     }
 
+    @Test
     @Tag("web")
     @Story("Чекбокс тип занятости")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Отображение на странице фильтрации чекбоксов для блока \"Тип занятости\"")
-    @Test
     void checkCheckboxesScheduleOnFilterPageTest() {
         filterPage.openPage()
                 .checkCheckboxesScheduleOnFilterPage();

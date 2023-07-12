@@ -15,8 +15,8 @@ import static ru.hh.api.service.GetEmployersApi.getEmployers;
 @DisplayName("Метод получения работодателей")
 public class GetEmployersTests {
 
-    @Tag("api")
     @Test
+    @Tag("api")
     @DisplayName("Проверка возвращаемых параметров в методе GET /employers")
     void getEmployersByDifferentParams() {
 

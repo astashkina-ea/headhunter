@@ -7,8 +7,8 @@ import lombok.Data;
 public class NegotiationModel {
 
     @JsonProperty("vacancy_id")
-    String idVacancy;
+    private String idVacancy;
     @JsonProperty("resume_id")
-    String idResume;
-    String message;
+    private String idResume;
+    private String message;
 }

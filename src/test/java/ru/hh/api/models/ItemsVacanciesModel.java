@@ -7,6 +7,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ItemsVacanciesModel {
 
-	private AreaModel area;
-	private EmploymentModel employment;
+    private AreaModel area;
+    private EmploymentModel employment;
 }

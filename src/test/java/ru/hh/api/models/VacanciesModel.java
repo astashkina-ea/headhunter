@@ -1,6 +1,7 @@
 package ru.hh.api.models;
 
 import java.util.List;
+
 import lombok.Data;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -8,5 +9,5 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class VacanciesModel {
 
-	private List<ItemsVacanciesModel> items;
+    private List<ItemsVacanciesModel> items;
 }

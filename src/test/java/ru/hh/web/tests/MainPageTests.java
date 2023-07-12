@@ -17,10 +17,10 @@ public class MainPageTests extends TestBase{
     MainPage mainPage = new MainPage();
     SignUpPage signUpPage = new SignUpPage();
 
+    @Test
     @Tag("web")
     @Story("Регистрация")
     @Severity(SeverityLevel.CRITICAL)
-    @Test
     @DisplayName("Переход на страницу регистрации")
     void loginByEmailAndPasswordTest() {
         mainPage.openPage()

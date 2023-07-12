@@ -28,10 +28,10 @@ public class LoginTest extends TestBase {
     String emailValue = config.getLoginAccount();
     String passwordValue = config.getPasswordAccount();
 
+    @Test
     @Tag("web")
     @Story("Авторизация по почте")
     @Severity(SeverityLevel.CRITICAL)
-    @Test
     @DisplayName("Авторизация по почте и паролю")
     void loginByEmailAndPasswordTest() {
         loginPage.loginByEmailAndPassword(emailValue, passwordValue);

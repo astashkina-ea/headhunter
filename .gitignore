@@ -10,6 +10,7 @@ build/
 *.ipr
 
 ### Gradle ###
+gradle
 .gradle
 gradlew
 gradlew.bat

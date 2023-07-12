@@ -8,9 +8,9 @@ import lombok.Data;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ForbbidenErrorModel{
+public class ForbbidenErrorModel {
 
-	@JsonProperty("request_id")
-	private String idRequest;
-	private List<Errors> errors;
+    @JsonProperty("request_id")
+    private String idRequest;
+    private List<Errors> errors;
 }

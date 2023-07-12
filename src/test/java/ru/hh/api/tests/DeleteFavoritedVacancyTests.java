@@ -14,8 +14,8 @@ import static ru.hh.api.utils.RandomUtils.getRandomBetweenNumber;
 @DisplayName("Метод удаления вакансий")
 public class DeleteFavoritedVacancyTests {
 
-    @Tag("api")
     @Test
+    @Tag("api")
     @DisplayName("Отсутствие доступа на удаление вакансии из списка отобранных неавторизованным пользователем")
     void deleteFavoritedVacancyWithForbbidenErrorTest() {
         String idVacancy = String.format("%d", getRandomBetweenNumber(1, 100000));

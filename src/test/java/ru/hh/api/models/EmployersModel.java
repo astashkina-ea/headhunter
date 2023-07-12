@@ -8,10 +8,10 @@ import lombok.Data;
 @Data
 public class EmployersModel {
 
-	@JsonProperty("per_page")
-	private int perPage;
-	private int found;
-	private int pages;
-	private int page;
-	private List<ItemsEmployersModel> items;
+    @JsonProperty("per_page")
+    private int perPage;
+    private int found;
+    private int pages;
+    private int page;
+    private List<ItemsEmployersModel> items;
 }

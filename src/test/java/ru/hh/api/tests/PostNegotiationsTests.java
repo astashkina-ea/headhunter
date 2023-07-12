@@ -16,8 +16,8 @@ import static ru.hh.api.utils.RandomUtils.getRandomText;
 @DisplayName("Метод отклика на вакансию")
 public class PostNegotiationsTests {
 
-    @Tag("api")
     @Test
+    @Tag("api")
     @DisplayName("Отсутствие доступа на отклик на определенную вакансию неавторизованным пользователем")
     void postNegotiationsWithForbbidenErrorTest() {
         NegotiationModel requestBody = new NegotiationModel();
