@@ -1,5 +1,6 @@
 package ru.hh.api.tests;
 
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -22,6 +23,7 @@ import static ru.hh.api.service.GetDictionariesApi.getDictionaries;
 import static ru.hh.api.service.GetVacanciesApi.getVacancies;
 import static ru.hh.api.utils.RandomUtils.getRandomElementFromList;
 
+@Owner("Асташкина Екатерина")
 @DisplayName("Метод получения вакансий")
 public class GetVacanciesTests {
 

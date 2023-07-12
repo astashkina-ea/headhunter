@@ -1,9 +1,6 @@
 package ru.hh.web.tests;
 
-import io.qameta.allure.Feature;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
-import io.qameta.allure.Story;
+import io.qameta.allure.*;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -14,6 +11,7 @@ import ru.hh.web.pages.PersonalInfoSettingPage;
 import ru.hh.web.pages.components.NavigationComponent;
 import ru.hh.web.pages.components.ProfileDropdownListComponent;
 
+@Owner("Асташкина Екатерина")
 @Feature("Авторизация на hh.ru")
 @DisplayName("Авторизация")
 public class LoginTest extends TestBase {

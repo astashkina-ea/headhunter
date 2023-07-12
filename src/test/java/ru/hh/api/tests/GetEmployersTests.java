@@ -1,5 +1,6 @@
 package ru.hh.api.tests;
 
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -12,6 +13,7 @@ import static io.qameta.allure.Allure.step;
 import static org.junit.jupiter.api.Assertions.*;
 import static ru.hh.api.service.GetEmployersApi.getEmployers;
 
+@Owner("Асташкина Екатерина")
 @DisplayName("Метод получения работодателей")
 public class GetEmployersTests {
 

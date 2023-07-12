@@ -1,5 +1,6 @@
 package ru.hh.api.tests;
 
+import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -13,6 +14,7 @@ import static ru.hh.api.service.PostNegotiationsApi.postNegotiationsWithForbbide
 import static ru.hh.api.utils.RandomUtils.getRandomBetweenNumber;
 import static ru.hh.api.utils.RandomUtils.getRandomText;
 
+@Owner("Асташкина Екатерина")
 @DisplayName("Метод отклика на вакансию")
 public class PostNegotiationsTests {
 
