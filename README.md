@@ -83,6 +83,8 @@ web
 -DbrowserVersion=BROWSER_VERSION
 -DbrowserSize=BROWSER_SIZE
 -DremoteUrl=REMOTE_URL
+-DloginRemote=LOGIN_REMOTE
+-DpasswordRemote=PASSWORD_REMOTE
 -DloginAccount=LOGIN_ACCOUNT
 -DpasswordAccount=PASSWORD_ACCOUNT
 ```
@@ -93,6 +95,8 @@ web
 >- <code>BROWSER_VERSION</code> - версия браузера (по умолчанию 100.0)
 >- <code>BROWSER_SIZE</code> - размер окна браузера (по умолчанию 1920x1080)
 >- <code>REMOTE_URL</code> - адрес для удаленного запуска тестов
+>- <code>LOGIN_REMOTE</code> - логин для удаленного запуска тестов
+>- <code>PASSWORD_REMOTE</code> - пароль для удаленного запуска тестов
 >- <code>LOGIN_ACCOUNT</code> - логин тестового аккаунта (по умолчанию в credentials.properties)
 >- <code>PASSWORD_ACCOUNT</code> - пароль тествого аккаунта (по умолчанию в credentials.properties)
 
