@@ -3,6 +3,7 @@ package ru.hh.web.tests;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import org.aeonbits.owner.ConfigFactory;
+import ru.hh.web.config.RemoteConfig;
 import ru.hh.web.config.WebDriverConfig;
 import ru.hh.web.helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -17,19 +18,20 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
 
-    public static WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
+    public static WebDriverConfig webDriverConfig = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
+    public static RemoteConfig remoteConfig = ConfigFactory.create(RemoteConfig.class, System.getProperties());
 
     @BeforeAll
     static void beforeAll() {
 
         Configuration.pageLoadStrategy = "eager";
-        Configuration.baseUrl = config.getBaseUrl();
-        Configuration.browser = config.getBrowser();
-        Configuration.browserVersion = config.getBrowserVersion();
-        Configuration.browserSize = config.getBrowserSize();
+        Configuration.baseUrl = webDriverConfig.getBaseUrl();
+        Configuration.browser = webDriverConfig.browser();
+        Configuration.browserVersion = webDriverConfig.browserVersion();
+        Configuration.browserSize = webDriverConfig.browserSize();
 
-        if (config.getRemoteURL() != null && config.getPasswordRemote() != null && config.getLoginRemote() != null) {
-            Configuration.remote = String.format("https://%s:%s@%s/wd/hub", config.getLoginRemote(), config.getPasswordRemote(), config.getRemoteURL());
+        if (remoteConfig.remoteURL() != null && remoteConfig.passwordRemote() != null && remoteConfig.loginRemote() != null) {
+            Configuration.remote = String.format("https://%s:%s@%s/wd/hub", remoteConfig.loginRemote(), remoteConfig.passwordRemote(), remoteConfig.remoteURL());
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                     "enableVNC", true,
@@ -49,7 +51,7 @@ public class TestBase {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
-        if (config.getRemoteURL() != null && config.getPasswordRemote() != null && config.getLoginRemote() != null) {
+        if (remoteConfig.remoteURL() != null && remoteConfig.passwordRemote() != null && remoteConfig.loginRemote() != null) {
             Attach.addVideo();
         }
         closeWebDriver();

@@ -8,8 +8,8 @@ import org.aeonbits.owner.Config;
 
 public interface CredentialsConfig extends Config{
     @Key("loginAccount")
-    String getLoginAccount();
+    String loginAccount();
 
     @Key("passwordAccount")
-    String getPasswordAccount();
+    String passwordAccount();
 }

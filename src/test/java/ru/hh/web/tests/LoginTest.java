@@ -23,8 +23,8 @@ public class LoginTest extends TestBase {
     ProfileDropdownListComponent profileDropdownListComponent = new ProfileDropdownListComponent();
     PersonalInfoSettingPage personalInfoSettingPage = new PersonalInfoSettingPage();
 
-    String emailValue = config.getLoginAccount();
-    String passwordValue = config.getPasswordAccount();
+    String emailValue = config.loginAccount();
+    String passwordValue = config.passwordAccount();
 
     @Test
     @Tag("web")
