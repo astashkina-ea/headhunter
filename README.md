@@ -163,7 +163,7 @@ Report</code>, кликнув по которому, откроется стра
 
 ## <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="media/logo/AllureTestOps.svg"> Интеграция с Allure TestOps
 
-### <a target="_blank" href="https://allure.autotests.cloud/project/3478/dashboards">Dashboard</a> с общими результатами тестирования
+### <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-761"> с общими результатами тестирования
 
 ![This is an image](/media/screens/Allure_TestOps_1.png)
 
