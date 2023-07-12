@@ -163,7 +163,7 @@ Report</code>, кликнув по которому, откроется стра
 
 ## <img width="4%" style="vertical-align:middle" title="Allure TestOps" src="media/logo/AllureTestOps.svg"> Интеграция с Allure TestOps
 
-### <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-761"> с общими результатами тестирования
+### <a target="_blank" href="https://allure.autotests.cloud/project/3478/dashboards">Dashboard</a> с общими результатами тестирования
 
 ![This is an image](/media/screens/Allure_TestOps_1.png)
 
@@ -187,7 +187,7 @@ ___
 
 ## <img width="4%" style="vertical-align:middle" title="Jira" src="media/logo/Jira.svg"> Интеграция с Jira
 
-### Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>. <a target="_blank" href="https://allure.autotests.cloud/project/3478/dashboards">В задаче</a> отображаются прикреплённые к ней тест-кейсы и также прикреплены результаты запусков/прохождения тестов
+### Реализована интеграция <code>Allure TestOps</code> с <code>Jira</code>. <a target="_blank" href="https://jira.autotests.cloud/browse/HOMEWORK-761">В задаче</a> отображаются прикреплённые к ней тест-кейсы и также прикреплены результаты запусков/прохождения тестов
 
 ![This is an image](/media/screens/Jira_1.png)
 
