@@ -13,7 +13,7 @@ def allureVersion = '2.22.1',
     restAssuredVersion = "5.3.0",
     slf4jVersion = '2.0.7',
     javafaker = "1.0.2",
-    owner = "1.0.4"
+    jackson = "2.15.2"
 
 repositories {
     mavenCentral()
@@ -42,7 +42,8 @@ dependencies {
             "com.codeborne:selenide:$selenideVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
             "io.rest-assured:rest-assured:$restAssuredVersion",
-            "io.rest-assured:json-schema-validator:$restAssuredVersion",
+            "com.fasterxml.jackson.core:jackson-databind:$jackson",
+            "com.fasterxml.jackson.core:jackson-core:$jackson",
             "io.qameta.allure:allure-rest-assured:$allureVersion",
             "com.github.javafaker:javafaker:$javafaker",
             "org.junit.jupiter:junit-jupiter:$junitVersion",
@@ -67,13 +68,13 @@ test {
 }
 
 task web_test(type: Test) {
-    useJUnitPlatform{
+    useJUnitPlatform {
         includeTags("web")
     }
 }
 
 task api_test(type: Test) {
-    useJUnitPlatform{
+    useJUnitPlatform {
         includeTags("api")
     }
 }
