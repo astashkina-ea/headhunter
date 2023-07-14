@@ -25,7 +25,7 @@ public class TestBase {
     static void beforeAll() {
 
         Configuration.pageLoadStrategy = "eager";
-        Configuration.baseUrl = webDriverConfig.getBaseUrl();
+        Configuration.baseUrl = webDriverConfig.baseUrl();
         Configuration.browser = webDriverConfig.browser();
         Configuration.browserVersion = webDriverConfig.browserVersion();
         Configuration.browserSize = webDriverConfig.browserSize();
