@@ -100,6 +100,14 @@ web
 >- <code>LOGIN_ACCOUNT</code> - логин тестового аккаунта (по умолчанию в credentials.properties)
 >- <code>PASSWORD_ACCOUNT</code> - пароль тествого аккаунта (по умолчанию в credentials.properties)
 
+Примечание: для локального запуска автотестов необходимо в папку src/test/resources добавить файл credentials.properties 
+с логином и паролем от тестовой УЗ. Пример заполненного файла:
+
+```
+loginAccount=<логин от тестовой УЗ>
+passwordAccount=<пароль от тестовой УЗ>
+```
+
 ### Api-тесты с параметрами сборки по умолчанию
 
 ```

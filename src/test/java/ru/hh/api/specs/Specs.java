@@ -28,12 +28,6 @@ public class Specs {
             .expectStatusCode(200)
             .build();
 
-    public static ResponseSpecification response302Spec = new ResponseSpecBuilder()
-            .log(STATUS)
-            .log(BODY)
-            .expectStatusCode(302)
-            .build();
-
     public static ResponseSpecification response403Spec = new ResponseSpecBuilder()
             .log(STATUS)
             .log(BODY)
