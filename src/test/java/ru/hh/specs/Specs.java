@@ -20,7 +20,7 @@ public class Specs {
             .log().body()
             .filter(withCustomTemplates())
             .contentType(ContentType.JSON)
-            .baseUri(config.getBaseApiUrl());
+            .baseUri(config.baseApiUrl());
 
     public static ResponseSpecification response200Spec = new ResponseSpecBuilder()
             .log(STATUS)

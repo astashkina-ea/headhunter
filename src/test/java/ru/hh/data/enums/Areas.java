@@ -31,6 +31,6 @@ public enum Areas {
 
     public String getUrl() {
         ApiConfig config = ConfigFactory.create(ApiConfig.class, System.getProperties());
-        return config.getBaseApiUrl() + url;
+        return config.baseApiUrl() + url;
     }
 }

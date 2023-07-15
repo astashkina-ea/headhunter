@@ -9,5 +9,5 @@ import org.aeonbits.owner.Config;
 public interface ApiConfig extends Config {
     @Key("baseApiUrl")
     @DefaultValue("https://api.hh.ru")
-    String getBaseApiUrl();
+    String baseApiUrl();
 }
