@@ -61,36 +61,26 @@ ___
 
 ## :arrow_forward: Локальный запуск автотестов
 
-### Web-тесты на локальном бразуере с параметрами сборки по умолчанию
-
-```
-gradle clean web
-```
-
-### Web-тесты на локальном браузере с параметрами сборки из local.properties
-
-```
-gradle clean web -Denvironment='local'
-```
-
-### Web-тесты на локальном/удаленном браузере с указанием необходимых параметров сборки
+### Для запуска автотестов локально необходимо выполнить команду с указанием нужных параметров сборки 
 
 ```
 gradle clean
-web
+TASK
 -DbaseUrl=BASE_URL
 -Dbrowser=BROWSER
 -DbrowserVersion=BROWSER_VERSION
 -DbrowserSize=BROWSER_SIZE
--DremoteUrl=REMOTE_URL
--DloginRemote=LOGIN_REMOTE
--DpasswordRemote=PASSWORD_REMOTE
+-Dselenoid.url=REMOTE_URL
+-Dselenoid.login=LOGIN_REMOTE
+-Dselenoid.password=PASSWORD_REMOTE
 -DloginAccount=LOGIN_ACCOUNT
 -DpasswordAccount=PASSWORD_ACCOUNT
+-DbaseApiUrl=BASE_API_URL
 ```
 
 где:
->- <code>BASE_URL</code> - адрес тестового стенда (по умолчанию https://hh.ru)
+>- <code>TASK</code> - web/api/test
+>- <code>BASE_URL</code> - адрес тестового стенда для web тестов (по умолчанию https://hh.ru)
 >- <code>BROWSER</code> - браузер, в котором будут выполняться тесты (по умолчанию chrome)
 >- <code>BROWSER_VERSION</code> - версия браузера (по умолчанию 100.0)
 >- <code>BROWSER_SIZE</code> - размер окна браузера (по умолчанию 1920x1080)
@@ -99,36 +89,14 @@ web
 >- <code>PASSWORD_REMOTE</code> - пароль для удаленного запуска тестов
 >- <code>LOGIN_ACCOUNT</code> - логин тестового аккаунта (по умолчанию в credentials.properties)
 >- <code>PASSWORD_ACCOUNT</code> - пароль тествого аккаунта (по умолчанию в credentials.properties)
+>- <code>BASE_API_URL</code> - адрес тестового стенда api тестов (по умолчанию https://api.hh.ru)
 
-Примечание: для локального запуска автотестов необходимо в папку src/test/resources добавить файл credentials.properties 
+Примечание: для локального запуска web-тестов необходимо в папку src/test/resources добавить файл credentials.properties 
 с логином и паролем от тестовой УЗ. Пример заполненного файла:
 
 ```
 loginAccount=<логин от тестовой УЗ>
 passwordAccount=<пароль от тестовой УЗ>
-```
-
-### Api-тесты с параметрами сборки по умолчанию
-
-```
-gradle clean api 
-```
-
-### Api-тесты с указанием необходимых параметров сборки
-
-```
-gradle clean
-TASK
--DbaseApiUrl=BASE_API_URL
-```
-
-где:
->- <code>BASE_API_URL</code> - адрес тестового стенда (по умолчанию https://api.hh.ru)
-
-### Запуск всех тестов
-
-```
-gradle clean test
 ```
 
 ___
