@@ -94,6 +94,11 @@ TASK
 Примечание: для локального запуска web-тестов необходимо в папку src/test/resources добавить файл credentials.properties 
 с логином и паролем от тестовой УЗ. Пример заполненного файла:
 
+```
+loginAccount=<логин от тестовой УЗ>
+passwordAccount=<пароль от тестовой УЗ>
+```
+
 ___
 
 ## <img width="4%" style="vertical-align:middle" title="Jenkins" src="media/logo/Jenkins.svg"> Запуск автотестов в Jenkins
