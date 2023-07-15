@@ -4,12 +4,12 @@ import org.aeonbits.owner.Config;
 
 public interface RemoteConfig extends Config{
 
-    @Config.Key("remoteUrl")
-    String remoteURL();
+    @Config.Key("selenoid.url")
+    String url();
 
-    @Config.Key("loginRemote")
-    String loginRemote();
+    @Config.Key("selenoid.login")
+    String login();
 
-    @Config.Key("passwordRemote")
-    String passwordRemote();
+    @Config.Key("selenoid.password")
+    String password();
 }

@@ -3,7 +3,7 @@ package ru.hh.config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:properties/webDriver.properties"
+        "classpath:properties/test.properties"
 })
 
 public interface WebDriverConfig extends Config {

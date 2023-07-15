@@ -30,8 +30,8 @@ public class TestBase {
         Configuration.browserVersion = webDriverConfig.browserVersion();
         Configuration.browserSize = webDriverConfig.browserSize();
 
-        if (remoteConfig.remoteURL() != null && remoteConfig.passwordRemote() != null && remoteConfig.loginRemote() != null) {
-            Configuration.remote = String.format("https://%s:%s@%s/wd/hub", remoteConfig.loginRemote(), remoteConfig.passwordRemote(), remoteConfig.remoteURL());
+        if (remoteConfig.url() != null && remoteConfig.password() != null && remoteConfig.login() != null) {
+            Configuration.remote = String.format("https://%s:%s@%s/wd/hub", remoteConfig.login(), remoteConfig.password(), remoteConfig.url());
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                     "enableVNC", true,
@@ -51,7 +51,7 @@ public class TestBase {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
-        if (remoteConfig.remoteURL() != null && remoteConfig.passwordRemote() != null && remoteConfig.loginRemote() != null) {
+        if (remoteConfig.url() != null && remoteConfig.password() != null && remoteConfig.login() != null) {
             Attach.addVideo();
         }
         closeWebDriver();
