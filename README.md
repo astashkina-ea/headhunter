@@ -70,9 +70,9 @@ TASK
 -Dbrowser=BROWSER
 -DbrowserVersion=BROWSER_VERSION
 -DbrowserSize=BROWSER_SIZE
--DremoteUrl=REMOTE_URL
--DloginRemote=LOGIN_REMOTE
--DpasswordRemote=PASSWORD_REMOTE
+-Dselenoid.url=REMOTE_URL
+-Dselenoid.login=LOGIN_REMOTE
+-Dselenoid.password=PASSWORD_REMOTE
 -DloginAccount=LOGIN_ACCOUNT
 -DpasswordAccount=PASSWORD_ACCOUNT
 -DbaseApiUrl=BASE_API_URL
